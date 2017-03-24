@@ -18,33 +18,33 @@ namespace EscuelasDeportivas.Service.Controllers
             DomainManager = new EntityDomainManager<Deporte>(context, Request);
         }
 
-        // GET tables/TodoItem
-        public IQueryable<Deporte> GetAllTodoItems()
+        // GET tables/Deporte
+        public IQueryable<Deporte> GetAllDeportes()
         {
             return Query();
         }
 
-        // GET tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public SingleResult<Deporte> GetTodoItem(string id)
+        // GET tables/Deporte/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public SingleResult<Deporte> GetDeporte(string id)
         {
             return Lookup(id);
         }
 
-        // PATCH tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task<Deporte> PatchTodoItem(string id, Delta<Deporte> patch)
+        // PATCH tables/Deporte/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public Task<Deporte> PatchDeporte(string id, Delta<Deporte> patch)
         {
             return UpdateAsync(id, patch);
         }
 
-        // POST tables/TodoItem
-        public async Task<IHttpActionResult> PostTodoItem(Deporte item)
+        // POST tables/Deporte
+        public async Task<IHttpActionResult> PostDeporte(Deporte item)
         {
             Deporte current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
 
-        // DELETE tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task DeleteTodoItem(string id)
+        // DELETE tables/Deporte/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public Task DeleteDeporte(string id)
         {
             return DeleteAsync(id);
         }

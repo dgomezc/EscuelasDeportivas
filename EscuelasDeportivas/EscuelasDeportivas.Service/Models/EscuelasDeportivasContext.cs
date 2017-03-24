@@ -26,7 +26,7 @@ namespace EscuelasDeportivas.Service.Models
         {
         }
 
-        public DbSet<Deporte> TodoItems { get; set; }
+        public DbSet<Deporte> Deportes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -49,15 +49,15 @@ namespace EscuelasDeportivas.Service
     {
         protected override void Seed(EscuelasDeportivasContext context)
         {
-            List<Deporte> todoItems = new List<Deporte>
+            List<Deporte> deportes = new List<Deporte>
             {
                 new Deporte { Id = Guid.NewGuid().ToString(), Nombre = "Fútbol", Descripcion = "Descripción para el deporte Fútbol" },
                 new Deporte { Id = Guid.NewGuid().ToString(), Nombre = "Fútbol Sala", Descripcion = "Descripción para el deporte Fútbol Sala" }
             };
 
-            foreach (Deporte todoItem in todoItems)
+            foreach (Deporte deporte in deportes)
             {
-                context.Set<Deporte>().Add(todoItem);
+                context.Set<Deporte>().Add(deporte);
             }
 
             base.Seed(context);
