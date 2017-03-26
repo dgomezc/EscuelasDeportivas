@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace EscuelasDeportivas
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace EscuelasDeportivas.Pages
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ListaDeportesPage : ContentPage
     {
-        public MainPage()
+        public ListaDeportesPage()
         {
             InitializeComponent();
         }

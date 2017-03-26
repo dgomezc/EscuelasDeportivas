@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using EscuelasDeportivas.ViewModels;
+using FreshMvvm;
 
 using Xamarin.Forms;
 
@@ -13,7 +11,10 @@ namespace EscuelasDeportivas
         {
             InitializeComponent();
 
-            MainPage = new EscuelasDeportivas.MainPage();
+
+            var contactList = FreshPageModelResolver.ResolvePageModel<ListaDeportesViewModel>();
+            var navContainer = new FreshNavigationContainer(contactList);
+            MainPage = navContainer;
         }
 
         protected override void OnStart()
