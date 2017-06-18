@@ -1,7 +1,10 @@
-﻿using FreshMvvm;
+﻿using EscuelasDeportivas.Models;
+using EscuelasDeportivas.Services;
+using FreshMvvm;
 using PropertyChanged;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,22 +17,24 @@ namespace EscuelasDeportivas.ViewModels
         {
         }
 
-        public List<DeporteViewModel> Deportes { get; set; }
+        public ObservableCollection<Deporte> Deportes { get; set; }
 
-        public override void Init(object initData)
+        public override async void Init(object initData)
         {
             base.Init(initData);
 
-            Deportes = new List<DeporteViewModel>
+
+            var result = await DeportesService.Instance.ReadDeportesAsync();
+
+            if (result != null)
             {
-                new DeporteViewModel{Nombre="Futbol", Descripcion="Detalle fútbol"},
-                new DeporteViewModel{Nombre="Futbol sala", Descripcion="Detalle fútbol sala"}
-            };
+                Deportes = new ObservableCollection<Deporte>(result);
+            }
         }
 
 
 
-        public DeporteViewModel SelectedDeporte
+        public Deporte SelectedDeporte
         {
             get { return null; }
             set

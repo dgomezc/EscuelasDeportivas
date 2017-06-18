@@ -1,4 +1,5 @@
-﻿using FreshMvvm;
+﻿using EscuelasDeportivas.Models;
+using FreshMvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace EscuelasDeportivas.ViewModels
 {
     public class DetalleDeporteViewModel : FreshBasePageModel
     {
-        public DeporteViewModel Deporte { get; set; }
+        public Deporte Deporte { get; set; }
 
         public DetalleDeporteViewModel()
         {
@@ -19,7 +20,7 @@ namespace EscuelasDeportivas.ViewModels
         {
             base.Init(initData);
 
-            Deporte = initData as DeporteViewModel;
+            Deporte = initData as Deporte;
         }
 
     }

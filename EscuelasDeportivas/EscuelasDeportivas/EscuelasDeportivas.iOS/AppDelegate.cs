@@ -22,6 +22,7 @@ namespace EscuelasDeportivas.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

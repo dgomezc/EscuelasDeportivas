@@ -52,7 +52,9 @@ namespace EscuelasDeportivas.Service
             List<Deporte> deportes = new List<Deporte>
             {
                 new Deporte { Id = Guid.NewGuid().ToString(), Nombre = "Fútbol", Descripcion = "Descripción para el deporte Fútbol" },
-                new Deporte { Id = Guid.NewGuid().ToString(), Nombre = "Fútbol Sala", Descripcion = "Descripción para el deporte Fútbol Sala" }
+                new Deporte { Id = Guid.NewGuid().ToString(), Nombre = "Fútbol Sala", Descripcion = "Descripción para el deporte Fútbol Sala" },
+                new Deporte { Id = Guid.NewGuid().ToString(), Nombre = "Baloncesto", Descripcion = "Descripción para el deporte Baloncesto" },
+                new Deporte { Id = Guid.NewGuid().ToString(), Nombre = "Balonmano", Descripcion = "Descripción para el deporte Balonmano" }
             };
 
             foreach (Deporte deporte in deportes)
