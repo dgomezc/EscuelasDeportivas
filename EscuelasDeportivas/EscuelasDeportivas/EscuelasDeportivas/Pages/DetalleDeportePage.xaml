@@ -4,8 +4,7 @@
              x:Class="EscuelasDeportivas.Pages.DetalleDeportePage"
              Title="{Binding Deporte.Nombre}">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="Edit" Command="{Binding EditCommand}" Order="Primary" Priority="0" />
-        <ToolbarItem Name="Save" Command="{Binding SaveCommand}" Order="Primary" Priority="1" />
+        <ToolbarItem Name="Editar" Command="{Binding EditCommand}" Order="Primary" Priority="0" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
 

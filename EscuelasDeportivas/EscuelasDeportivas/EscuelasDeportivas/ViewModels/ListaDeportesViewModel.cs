@@ -8,9 +8,12 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace EscuelasDeportivas.ViewModels
 {
+    [ImplementPropertyChanged]
     public class ListaDeportesViewModel : FreshBasePageModel
     {
         public ListaDeportesViewModel()
@@ -41,6 +44,16 @@ namespace EscuelasDeportivas.ViewModels
             {
                 CoreMethods.PushPageModel<DetalleDeporteViewModel>(value);
                 RaisePropertyChanged();
+            }
+        }
+
+        public ICommand NewCommand
+        {
+            get
+            {
+                return new Command(async () => {
+                    await CoreMethods.PushPageModel<EditarDeporteViewModel>(new Deporte());
+                });
             }
         }
 
